@@ -35,29 +35,29 @@ function Header() {
                         className='w-full mobile:w-fit px-4 py-[4px] shadow-md bg-white border-2 rounded-full transition-all duration-1000 ease-in-out'
                         onClick={() => setSearchFocused(true)}
                     >
-                        <div className='hidden mobile:block'>
-                            <div className='flex gap-2 items-center'>
+                        <span className='hidden mobile:block'>
+                            <span className='flex gap-2 items-center'>
                                 <p className='border-r-2 px-2'>Anywhere</p>
                                 <p className='border-r-2 px-2'>Anytime</p>
                                 <p className='px-2'>Whoever</p>
-                                <button
-                                    className='flex items-center p-2 bg-primarycolor rounded-full text-white'><IoSearch className='w-[18px] h-[18px]' /></button>
-                            </div>
-                        </div>
-                        <div className='mobile:hidden w-full flex items-center text-gray-500'>
+                                <span
+                                    className='flex items-center p-2 bg-primarycolor rounded-full text-white'><IoSearch className='w-[18px] h-[18px]' /></span>
+                            </span>
+                        </span>
+                        <span className='mobile:hidden w-full flex items-center text-gray-500'>
                             <span className='pr-4 text-black'><IoSearch /></span>
-                            <div className='flex flex-col text-left grow'>
+                            <span className='flex flex-col text-left grow'>
                                 <span className='font-semibold text-black text-[1rem]'>Anywhere</span>
                                 <span className='text-[0.75rem]'>Add date | Add guests</span>
-                            </div>
-                            <button className='shrink border-2 rounded-full p-2'><MdOutlineFilterList className='text-black'/></button>
-                        </div>
+                            </span>
+                            <span className='shrink border-2 rounded-full p-2'><MdOutlineFilterList className='text-black'/></span>
+                        </span>
                     </button>
             }
             <div className='hidden mobile:block'>
                 <div className="navbar--last flex items-center gap-4">
                     <button className="p-2 rounded-full bg-white text-[0.75rem] font-bold hover:bg-gray-100 ease-in-out duration-300">
-                        Host your home
+                        <span>Host your home</span>
                     </button>
                     <button className="rounded-full hover:bg-gray-100 p-2  bg-white ease-in-out duration-300">
                         <TbWorld className="w-[24px] h-[24px]" />
