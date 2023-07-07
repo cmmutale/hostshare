@@ -33,8 +33,8 @@ function page({ params }) {
                         <span>|</span>
                         <span className='underline font-semibold'>{`${targetProperty.visibleReviewCount} reviews`}</span>
                         <span>|</span>
-                        <span>{(targetProperty.host.isSuperhost) ? "Superhost" : "No"}</span>
-                        <span>|</span>
+                        {/* <span>{(targetProperty.host.isSuperhost) ? "Superhost" : ""}</span>
+                        <span>|</span> */}
                         <span className='underline font-semibold'>{`${targetProperty.location.city}, ${targetProperty.location.country.title}`}</span>
                     </div>
                     <div className='flex items-center basis-1/4 max-mobile:hidden'>
