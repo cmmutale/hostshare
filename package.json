@@ -1,0 +1,30 @@
+{
+  "name": "hostshare",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/node": "20.3.3",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "autoprefixer": "10.4.14",
+    "daisyui": "^3.1.9",
+    "date-fns": "^2.30.0",
+    "google-map-react": "^2.2.1",
+    "next": "13.4.8",
+    "postcss": "8.4.24",
+    "react": "^18.2.0",
+    "react-date-range": "^1.4.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "react-simple-image-slider": "^2.4.1",
+    "swr": "^2.2.0",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.1.6"
+  }
+}

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+
+h1{
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+button, .button{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    gap: 4px;
+}
+
+.button--outline{
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.button-lg{
+    height: 52px;
+    font-weight: bold;
+}
+
+.button-md{
+    height: 36px;
+    font-weight: 600;
+}
+
+.button--fill{
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.map-container{
+    height: 500px;
+    width: 800px;
+}
+
+::-webkit-scrollbar{
+    height: 0.3rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgb(235, 234, 234);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+:root{
+    --primary-color: #329a9a;
+}
