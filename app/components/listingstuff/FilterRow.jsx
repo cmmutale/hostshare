@@ -26,7 +26,7 @@ function FilterRow() {
 
     
     return (
-        <div className='py-4 w-full flex gap-2 relative items-center'>
+        <div className='filter-row py-4 w-full flex gap-2 relative items-center'>
             <button
             onClick={goBack}
             id='backButton' 

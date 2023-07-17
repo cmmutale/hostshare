@@ -1,8 +1,8 @@
 'use client'
 import React from 'react'
 import getData from '@/hooks/Datahook'
-import ListingCard from '@/app/components/cards/ListingCard'
 import Slider from '@/app/components/gallery/Slider'
+import MasonryGrid from '@/app/components/gallery/MasonryGrid'
 import Map from '@/app/components/map/Map'
 
 import { AiFillStar } from 'react-icons/ai';
@@ -24,7 +24,7 @@ function page({ params }) {
     const targetProperty = listingProperty[0][1].info
     console.log(targetProperty);
     return (
-        <div className='max-w-4xl mx-auto font-primaryfont'>
+        <div className='max-w-6xl mx-auto font-primaryfont'>
             <div className='flex flex-col max-mobile:flex-col-reverse'>
                 <div className='header flex flex-wrap py-4 max-mobile:px-4'>
                     <h1 className='basis-full'>{targetProperty.title}</h1>
@@ -43,14 +43,19 @@ function page({ params }) {
                     </div>
                 </div>
                 <div className=''>
-                    <Slider images={targetProperty.images.data} width={414} height={300} />
+                    <div className='mobile:hidden'>
+                        <Slider images={targetProperty.images.data} width={`100%`} height={300} />
+                    </div>
+                    <div className='max-mobile:hidden'>
+                        <MasonryGrid images={targetProperty.images.data} />
+                    </div>
                 </div>
             </div>
             <div className='mobile:flex flex-row-reverse gap-4 mt-8 max-mobile:px-4'>
                 <div className='mobile:w-1/3
                 max-mobile:fixed max-mobile:bottom-0 max-mobile:w-screen max-mobile:right-0 max-mobile:left-0
                 '>
-                    <div className='listing-info-card bg-white shadow-md mobile:sticky mobile:top-4 text-gray-600 mobile:p-4 mobile:rounded-lg w-full bg-white mobile:border-2
+                    <div className='listing-info-card bg-white shadow-md mobile:sticky mobile:top-[100px] text-gray-600 mobile:p-4 mobile:rounded-lg w-full bg-white mobile:border-2
                     max-mobile:flex max-mobile:items-center max-mobile:justify-between max-mobile:px-4 max-mobile:border-2 max-mobile:h-[80px] max-mobile:z-[999]
                     '>
                         <div className='flex justify-between'>
