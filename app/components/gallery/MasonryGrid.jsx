@@ -2,7 +2,7 @@ import React from 'react'
 
 function MasonryGrid({ images }) {
     return (
-        <div className='relative flex gap-2 max-h-[600px] px-4'>
+        <div className='relative w-full flex gap-2 max-h-[600px]'>
             <div className='basis-1/2'>
                 <img src={images[0].url} alt="listing image" className='w-full h-full rounded-l-xl object-cover' />
             </div>

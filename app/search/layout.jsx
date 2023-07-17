@@ -1,8 +1,10 @@
 import Header from '../components/header/Header';
+// import { AnimatePresence, motion } from 'framer-motion';
 
-function SearchLayout({children}) {
+function SearchLayout({ children }) {
     return (
         <>
+            <Header />
             {children}
         </>
     )

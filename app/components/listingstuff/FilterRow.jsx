@@ -2,11 +2,12 @@
 import { useEffect, useRef } from 'react';
 import getData from '../../../hooks/Datahook.jsx'
 import {HiOutlineChevronRight, HiOutlineChevronLeft} from 'react-icons/hi'
+import { RowLoader } from '../loader/Loader.jsx';
 
 function FilterRow() {
     const { listingData, isLoading, isError } = getData();
 
-    if (isLoading) return <div>Loading</div>
+    if (isLoading) return <RowLoader />
     if (isError) return <div>Error while retrieving data</div>
 
     const listingCategories = Object.entries(listingData.categories);
