@@ -33,10 +33,10 @@ function SearchBar() {
                 <p>Experiences</p>
                 <p>Hosts</p>
             </div>
-            <div className="z-[999] flex items-center gap-8 justify-center mobile:border-2 mobile:rounded-full bg-white text-gray-500 mobile:shadow-md transition-all duration-1000 ease-in-out
+            <div className="z-[999] flex items-center gap-8 justify-center mobile:border-2 mobile:rounded-full bg-gray-100 text-gray-500 mobile:shadow-md transition-all duration-1000 ease-in-out
                 max-mobile:flex-col max-mobile:rounded-lg max-mobile:items-stretch max-mobile:h-full max-mobile:justify-start max-mobile:bg-transparent
             " >
-                <div className="search-bar__item dropdown dropdown-bottom rounded-full px-8 py-2 hover:bg-gray-200 hover:shadow-lg
+                <div className="search-bar__item dropdown dropdown-bottom rounded-full px-8 py-2 hover:bg-white hover:shadow-lg
                     max-mobile:bg-white max-mobile:rounded-lg max-mobile:border-[0.1px] max-mobile:border-black
                 ">
                     <label tabIndex={0} className="search__item-label cursor-pointer ">
@@ -63,7 +63,7 @@ function SearchBar() {
                         </div>
                     </div>
                 </div>
-                <div className="search-bar__item dropdown dropdown-bottom rounded-full px-8 py-2 hover:bg-gray-200 hover:shadow-lg
+                <div className="search-bar__item dropdown dropdown-bottom rounded-full px-8 py-2 hover:bg-white hover:shadow-lg
                     max-mobile:bg-white max-mobile:rounded-lg max-mobile:border-[0.1px] max-mobile:border-black
                 ">
                     <label tabIndex={0} className="search__item-label cursor-pointer ">
@@ -76,7 +76,7 @@ function SearchBar() {
                         </div>
                     </div>
                 </div>
-                <div className="search-bar__item dropdown dropdown-bottom rounded-full px-8 py-2 hover:bg-gray-200 hover:shadow-lg
+                <div className="search-bar__item dropdown dropdown-bottom rounded-full px-8 py-2 hover:bg-white hover:shadow-lg
                     max-mobile:bg-white max-mobile:rounded-lg max-mobile:border-[0.1px] max-mobile:border-black
                 ">
                     <label tabIndex={0} className="search__item-label cursor-pointer ">

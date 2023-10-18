@@ -4,6 +4,7 @@ import getData from '@/hooks/Datahook'
 import Slider from '@/app/components/gallery/Slider'
 import MasonryGrid from '@/app/components/gallery/MasonryGrid'
 import Map from '@/app/components/map/Map'
+import LocationDetailHeader from '@/app/components/listingstuff/ListingDetailHeader';
 import { AnimatePresence, motion } from 'framer-motion'
 
 import { AiFillStar } from 'react-icons/ai';
@@ -11,6 +12,7 @@ import { HiOutlineChevronRight } from 'react-icons/hi'
 import { AiOutlineHeart } from 'react-icons/ai'
 import { FiShare } from 'react-icons/fi'
 import { Loader } from '@/app/components/loader/Loader'
+import ListingDetailHeader from '@/app/components/listingstuff/ListingDetailHeader'
 
 
 function page({ params }) {
@@ -38,22 +40,13 @@ function page({ params }) {
         >
             <div className='max-w-6xl mx-auto font-primaryfont mobile:px-4'>
                 <div className='flex flex-col max-mobile:flex-col-reverse'>
-                    <div className='header flex flex-wrap py-4 max-mobile:px-4'>
-                        <h1 className='basis-full'>{targetProperty.title}</h1>
-                        <div className='mobile:basis-3/4 flex gap-2'>
-                            <span className='flex items-center'><AiFillStar width={52} height={52} /> {targetProperty.ratings.guestSatisfactionOverall}</span>
-                            <span>|</span>
-                            <span className='underline font-semibold'>{`${targetProperty.visibleReviewCount} reviews`}</span>
-                            <span>|</span>
-                            {/* <span>{(targetProperty.host.isSuperhost) ? "Superhost" : ""}</span>
-                        <span>|</span> */}
-                            <span className='underline font-semibold'>{`${targetProperty.location.city}, ${targetProperty.location.country.title}`}</span>
-                        </div>
-                        <div className='flex items-center mobile:justify-end basis-1/4 max-mobile:hidden'>
-                            <button><FiShare width={52} height={52} /> <span className='underline'>Share</span></button>
-                            <button className='pr-0'><AiOutlineHeart width={52} height={52} /> <span className='underline'>Save</span></button>
-                        </div>
-                    </div>
+                    <ListingDetailHeader
+                        listingName={targetProperty.title}
+                        rating={targetProperty.ratings.guestSatisfactionOverall}
+                        reviewCount={targetProperty.visibleReviewCount}
+                        locationCity={targetProperty.location.city}
+                        locationCountry={targetProperty.location.country.title}
+                    />
                     <div className=''>
                         <div className='mobile:hidden'>
                             <Slider images={targetProperty.images.data} width={`100%`} height={300} />

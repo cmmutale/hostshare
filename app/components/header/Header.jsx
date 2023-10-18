@@ -13,18 +13,18 @@ import Link from 'next/link'
 function Header() {
     const [searchFocused, setSearchFocused] = useState(false)
 
-    useEffect(() => {
-        const handleWindowScroll = () => setSearchFocused(false)
-        if (searchFocused) {
-            window.addEventListener('scroll', handleWindowScroll);
-        } else {
-            window.removeEventListener('scroll', handleWindowScroll);
-        }
-    }, [searchFocused, setSearchFocused]);
+    // useEffect(() => {
+    //     const handleWindowScroll = () => setSearchFocused(false)
+    //     if (searchFocused) {
+    //         window.addEventListener('scroll', handleWindowScroll);
+    //     } else {
+    //         window.removeEventListener('scroll', handleWindowScroll);
+    //     }
+    // }, [searchFocused, setSearchFocused]);
 
     return (
         <>
-            <div className={`relative flex sticky top-0 justify-between px-[20px] laptop:py-0 py-2 border-b-2 desktop:px-[80px] bg-white z-[999]
+            <div className={`flex sticky top-0 justify-between px-[20px] laptop:py-0 py-2 border-b-2 desktop:px-[80px] bg-white z-[999]
             ${searchFocused ?
                     "h-[10rem] shadow-lg items-start max-mobile:fixed max-mobile:h-screen max-mobile:right-0 max-mobile:left-0 max-mobile:bg-[#f7f7f7]"
                     : "items-center"}`}>
@@ -93,7 +93,8 @@ function Header() {
                         "block opacity-100" : "hidden opacity-0"
                     }`}
                 onClick={() => setSearchFocused(false)}
-                onScroll={() => setSearchFocused(false)}
+                // onScroll={() => setSearchFocused(false)}
+                onWheel={() => setSearchFocused(false)}
             ></div>
         </>
     )
