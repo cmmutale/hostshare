@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/search/layout.jsx", "app/listing/[id]/page.jsx", "app/search/[city]/page.jsx", "app/components/listingstuff/ListingDetailHeader.jsx", "app/components/listingstuff/ListingAmenities.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/search/layout.jsx", "app/listing/[id]/page.jsx", "app/search/[city]/page.jsx", "app/components/listingstuff/ListingDetailHeader.jsx", "app/components/listingstuff/ListingAmenities.tsx"],
   "exclude": ["node_modules"]
 }

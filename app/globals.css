@@ -19,6 +19,16 @@ h1 {
     font-weight: bold;
 }
 
+h2 {
+    font-size: 1.5rem;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 button,
 .button {
     cursor: pointer;
@@ -152,6 +162,14 @@ button,
         opacity: 0;
         display: none !important;
     }
+}
+
+.decoration{
+    display: block;
+    width: 3px;
+    aspect-ratio: 1;
+    border-radius: 99px;
+    background-color: black;
 }
 
 :root {

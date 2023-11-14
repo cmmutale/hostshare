@@ -24,15 +24,23 @@ const variants = {
 };
 
 function Slider({ images, width, height }) {
+    console.log(images)
     return (
-        <div>
-            <ImageSlider
+        <div className='w-full bg-gray-500 aspect-video overflow-hidden'>
+            {/* <ImageSlider
                 width={width}
                 height={height}
                 images={images}
                 showNavs={true}
                 showBullets={false}
-            />
+            /> */}
+            <div className='image-track flex overflow-x-scroll w-full snap-x snap-mandatory'>
+                {
+                    images.map((item, index) => {
+                        return <img src={item.url} className='w-full object-cover snap-always'/>
+                    })
+                }
+            </div>
         </div>
     )
 }

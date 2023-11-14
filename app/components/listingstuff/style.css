@@ -1,0 +1,8 @@
+.spacer--decoration.listing-details ul li:not(:nth-child(1))::before{
+    content: "";
+    display: block;
+    width: 4px;
+    aspect-ratio: 1;
+    border-radius: 99px;
+    background-color: black;
+}
